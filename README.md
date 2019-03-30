@@ -21,3 +21,12 @@ Tasks Covered: Data Pre-processing
 Next Task : create hierarchy of time block, day, neighbourhood respectively, with count attribute.
 	: pass to a k-means classifier to get 3 distinct labelled categories of crime.
 	: will use categories obtained to gauge whether an area is dangerous or not.
+Nirbhaya App - Push 02
+
+- created hierarchical structure to label according to crime level
+
+- removed lower lying values from dataset to reduce complexity of said structure
+
+Next Task: 
+-implementing k-means to label crime levels according to general trends.
+-use these labels to gauge whether an area is dangerous or not
