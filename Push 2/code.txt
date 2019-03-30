@@ -1,0 +1,50 @@
+#COUNTING AREA FREQUENCY TO DETECT OUTLIERS
+for (i in 1:nrow(sortedres)){
+	
+	nbr <- sortedres[i,3]
+
+	
+	areapos <- which(df2$area == nbr)
+
+	df2[areapos,2] = df2[areapos,2]+1
+
+
+}
+
+
+#MAKING MR.BIG, 12 SLOTS, 365 DAYS, 84 AREAS
+for(i in 1:12)
+{
+	for(j in 1:365)
+	{
+		for(k in 1:84)
+		{
+			tdrow <- c(i,j,k,0,"unknown")
+			mrbig <- rbind(mrbig,tdrow)
+		}
+	}
+}
+
+
+
+####setting up mr big column names and values
+####run this first
+cnames <- c("time_block","doy","area","count","category")
+
+colnames(mrbig) <- cnames
+##run this first
+
+##RUN THIS SECOND
+for(i in 1:nrow(sortedresnice))
+{
+	tblock <- sortedresnice[i,1]
+	dayofyear <- sortedresnice[i,2]
+	nbr <- sortedresnice[i,3]
+
+	rowtemp <- which(mrbig$time_block == tblock & mrbig$doy == dayofyear & mrbig$area == nbr)
+
+	mrbig[rowtemp,4] <- mrbig[rowtemp,4]+1;#increment it
+
+
+}
+##RUN THIS SECOND
