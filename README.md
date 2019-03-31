@@ -33,3 +33,12 @@ Nirbhaya App - Push 02
 Next Task: 
 -implementing k-means to label crime levels according to general trends.
 -use these labels to gauge whether an area is dangerous or not
+
+
+Nirbhaya App - Push 03
+
+-Used k-means clustering algorithm on unlabelled dataset created, in order to form 3 separate clusters.
+
+-assigned a category value (1,2,3) to each row. 
+
+Next Task: build a progressive web-app and use the category wise safety results from the dataset to avoid unsafe areas along the route.
